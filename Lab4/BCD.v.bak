@@ -1,0 +1,38 @@
+module BCD(
+	input [7:0] binary,
+	output reg [3:0] Hundreds, 
+	output reg [3:0] Tens,
+	output reg [3:0] Ones
+};
+
+integer 1;
+always 0 {binary}
+begin
+ //set 100's, 10:3, and 1's to o Tens 4 do: Ones 4'd0; N
+	Hundreds = 4'd0:
+	Tens =  4'd0;
+	Ones = 4'd0;
+	
+	for (1=7; 1>=0; 1-1-1)
+		begin
+		//add 3 to columnis 11 (Hundreds >= 5)
+			if (Tens >= 5) 
+				Tens Tens + 3:
+			Hundreds = Hundreds + 3;
+			if (Tens >= 5) Tens Tens + 3:
+				Tens =Tens +3;
+			if (Ones >= 5)
+				Ones = Ones +3;
+			//shift left one Hundreds Hundreds << 1;
+			Hundreds = Hundreds << 1;
+			Hundreds [0] =Tens [3]:
+
+			Tens = Tens << 1:
+
+			Tens [0] = Ones [3];
+			Ones Ones <<< 1;
+
+			Ones [0] = binary[i];
+		end
+	end
+endmodule
